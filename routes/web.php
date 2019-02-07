@@ -12,8 +12,11 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('index');
 });
+
+Route::get('/admin', 'AdminController@admin')->name('admin');
+Route::get('/admin/users', 'AdminController@users')->name('users');
 
 Auth::routes();
 
